@@ -10,7 +10,7 @@ function Footer(){
                     </p>
                    
                 </div>
-                <p className="footer-text">Version 1.9.0</p>
+                <p className="footer-text">Version 00.01</p>
             </div>
         </footer>
     );
