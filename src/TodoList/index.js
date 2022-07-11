@@ -11,11 +11,9 @@ function TodoList(props){
 
             {(!!props.totalTodos && !props.searchedTodos.length) && props.onEmptySearchResults(props.searchText)}
 
-            {props.searchedTodos.map(renderFunct)}
+            {(!props.loading && !props.error) && props.searchedTodos.map(renderFunct)}
 
-            <ul>
-                {props.children}
-            </ul>
+            
         </section>
     );
 }

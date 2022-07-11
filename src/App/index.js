@@ -14,6 +14,7 @@ import { TodoForm } from '../TodoForm';
 import { LoadingTodo } from '../LoadingTodo';
 import { EmptyTodos } from '../EmptyTodos';
 import { TodosError } from '../ErrorTodos';
+import { ChangeAlert } from '../ChangeAlert'
 
 import { Footer } from '../Footer';
 // const defaultitem=[
@@ -39,6 +40,7 @@ function App() {
     searchValue, 
     setSearchValue,
     addTodo,
+    sincronizeTodos,
     } = useTodos();
 
     return (
@@ -101,6 +103,11 @@ function App() {
         <CreateTodoButton 
           setOpenModal={setOpenModal}
         />
+
+        <ChangeAlert
+          sincronize= {sincronizeTodos}
+        />
+
         <Footer />
       </React.Fragment>
     );
